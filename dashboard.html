@@ -1,0 +1,122 @@
+<!-- admin-dashboard.html -->
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Doctor's Dashboard</title>
+        <link rel="stylesheet" href="admin-dashboard.css" />
+    </head>
+    <body>
+        <header>
+            <img src="img\nhs-logo.jpg" alt="NHS logo" id="header-logo" />
+
+            <div class="header-content">
+                <h1>Doctor's Dashboard</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#appointments">Appointments</a></li>
+                        <li><a href="#patients">Patients</a></li>
+                        <li><a href="#messages">Messages</a></li>
+                        <li><a href="#settings">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="spacer"></div>
+        </header>
+
+        <main>
+            <section id="overview">
+                <h2>Overview</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>Today's Appointments</h3>
+                        <p>2</p>
+                    </div>
+                    <div class="stat">
+                        <h3>New Patients</h3>
+                        <p>5</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Unread Messages</h3>
+                        <p>3</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="appointments">
+                <h2>Appointments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Appointment rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="patients">
+                <h2>Patients</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Last Visit</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Patient rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul class="message-list">
+                    <!-- Message items will be dynamically added here -->
+                </ul>
+            </section>
+
+            <section id="settings">
+                <h2>Settings</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Doctor's Dashboard. All rights reserved.</p>
+        </footer>
+
+        <script src="admin-dashboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #005eb8; /* NHS Blue */
+    --secondary-color: #ffffff; /* White */
+    --font-family: 'Arial', sans-serif;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    /* font-family: 'Arial', sans-serif; */
+    background-color: #f0f2f5;
+    /* color: #333; */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #005EB8;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+    background-color: #005EB8;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    
+}
+
+nav a {
+    margin-right: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;  
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #fff;
+
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+#header-logo {
+    position: relative;
+    left: 10rem; /* Adjust based on desired spacing from the left edge */
+    height: 50px; /* Adjust based on your logo size */
+    width: 135px;
+}
+
+h1 {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px; /* Ensures the title is properly centered without default margins */
+}
+
+main {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto; /* Keeps main centered */
+    padding: 20px;
+    background-color: hsl(0, 2%, 93%);
+    display: flex; /* Ensuring flex layout */
+    flex-direction: row; /* Stack children vertically *//* Center-align the flex items */
+    flex: 1; /* Allow main to take up remaining space */
+    align-items: center; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    flex-grow: 0; /* Prevents the header text from growing */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #005EB8;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007f3b; /* NHS Dark Green */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #005EB8; /* NHS Blue for hover */
+}
+
+#booking-form, #appointment-details {
+    width: 100%; /* Ensure they take up full width of main */
+    max-width: 960px; /* Max width to match main's */
+    padding: 20px; /* Adjusted padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+#booking-form h2, #appointment-details h2 {
+    text-align: center; /* Centers the text of the headings */
+    width: 100%; /* Ensures the heading takes full width of its parent container */
+}
+
+footer {
+    background-color: #007f3b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: row; /* Adjust if necessary, depending on your design */
+        justify-content: center; /* This will center the flex items horizontally */
+        align-items: start; /* Aligns items to the start of the flex container */
+    }
+
+    #booking-form, #appointment-details {
+        flex: 1; /* This allows each section to take up equal space */
+        margin: 0 10px; /* Optional: Adds some space between the sections */
+        /* Ensure any specific widths or max-widths here do not contradict the flex behavior */
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+.appointment-list {
+    transition: all 0.3s ease-in-out;
+}
